@@ -1,0 +1,350 @@
+/* reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* estilos generales  */
+.contenedorGeneral{
+    background-color: #FFDD00;
+}
+
+main{
+    padding: 0.5rem;
+}
+
+img{
+    border: #237BE0 solid 3px;
+}
+
+/*  estilos header */
+div header{
+    background-color: #237be0;
+    height: 150px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+div header div a{
+    display: flex;
+    justify-content: center;
+}
+
+div header nav ul{
+    list-style: none;
+    gap: 6px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div header nav ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+    border: black solid 1px;
+    padding: 6px;
+}
+
+div header nav ul li a:hover{
+    color: #FFDD00;
+}
+
+
+div header div a img{
+    height: 100px;
+}
+
+div header div{
+    padding-bottom: 0.5rem;
+}
+
+/* estilos main index */
+
+.tituloIndex{
+    padding-top: 10px;
+}
+
+.tituloIndex, .subtituloIndex, .tituloPlantelActual{
+    text-align: center;
+}
+
+main .imagenIndex, main .imagenIndexDos{
+   display: grid;
+   justify-content: center;
+   gap: 1rem;
+   margin-bottom: 1rem;
+}
+
+.tituloPlantelActual{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+main .imagenIndex img, main .imagenIndexDos img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.componenteUno{
+    z-index: 900;
+}
+/* estilos main galeria */
+
+.tituloGaleria, .fotosGaleria{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.contenedorFotos{
+    margin: 1.8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 20%);
+    row-gap: 1.5rem;
+}
+
+.mainGaleria div div img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.videosGaleria{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.videoUno, .videoDos{
+    margin: 1rem 0.5rem;
+}
+
+.videoUno iframe, .videoDos iframe{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
+    display: none;
+}
+
+/* estilos main himno */
+
+.tituloHimno{
+    color: #237BE0;
+    text-align: center;
+}
+
+.subtituloHimno{
+    text-align: center;
+}
+
+.textoGrande{
+    color: #237BE0;
+}
+
+.imagenHimno img{
+    width: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.letraHimnoTitulo{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+/* estilos main titulos */
+
+.tituloTitulos{
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.subtituloTitulos{
+    text-align: center;
+}
+
+.mainTitulos div{
+    margin: 1rem 0px;
+}
+
+.mainTitulos .imgTitulos img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainTitulos .imgTitulosTotales img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+section{
+    padding: 1rem;
+}
+
+/* estilos main ubicacion */
+
+.ubicacionTitulo{
+    padding-top: 1rem;
+}
+
+.ubicacionTitulo, .ubicacionSubTitulo{
+    text-align: center;
+}
+
+.mainUbicacion div iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 1.5rem;
+}
+
+.mainUbicacion h3{
+    text-align: center;
+}
+
+/* estilos footer */
+
+footer{
+    background-color: #237BE0;
+    color: whitesmoke;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+footer .redes{
+    text-align: center;
+}
+
+footer div a{
+    margin-right: 20px;
+}
+
+
+/* desktop*/
+
+@media screen and (min-width:1024px) {
+
+    /* modificaciones main index */
+
+    .imagenIndex{
+        height: 300px;
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    main .imagenIndex img{
+        justify-content: center;
+    }
+
+    .imagenIndexDos{
+        padding: 0rem 6rem 2rem 6rem;
+    }
+    
+    /* modoficaciones galeria */
+
+    main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
+        display: block;
+    }
+
+    .contenedorFotos{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 20%);
+        column-gap: 1.5rem;
+    }
+
+    .fotoUno{
+        grid-row: span 2;
+    }
+
+    .fotoSeis{
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .videoUno, .videoDos{
+        display: flex;
+        justify-content: center;
+    }
+
+    .videoUno iframe, .videoDos iframe{
+        height: 500px;
+        width: 70%;
+        border: #237BE0 solid 3px;
+    }
+
+    /* modificaciones himno */
+    
+    main .subtituloHimno{
+        text-align: left;
+    }
+
+    .imagenHimno{
+        display: flex;
+        justify-content: center;
+    }
+
+    main .imagenHimno img{
+        height: 500px;
+        width: 70%;
+    }
+
+    /* modificaciones titulos */
+ 
+    .contenedorImg{
+        display: flex;
+        justify-content: center;
+    }
+    .imgTitulosTotales{
+        height: 500px;
+        width: 50%;  
+    }
+
+    .contenedorLetraHimno{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .letraUno, .letraDos, .letraTres{
+        border: solid 3px black;
+        background-color: bisque;
+        border-radius: 10px;
+    }
+    
+    .letraUno h5, .letraDos h5, .letraTres h5{
+        padding: 0.5rem;
+    }
+
+   .letraUno p, .letraDos p, .letraTres p{
+        padding: 0.5rem;
+    }
+
+    section div .carousel-inner{
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* modificaciones ubicacion */
+
+    .mapaBombonera{
+        display: flex;
+        justify-content: center;
+    }
+
+    main .mapaBombonera iframe{
+        height: 500px;
+        width: 40%;
+    }
+}
