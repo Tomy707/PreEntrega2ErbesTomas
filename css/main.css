@@ -45,11 +45,13 @@ div header nav ul li a{
     color: whitesmoke;
     text-decoration: none;
     border: black solid 1px;
+    border-radius: 20px;
     padding: 6px;
 }
 
 div header nav ul li a:hover{
     color: #FFDD00;
+    border: white solid 1px;
 }
 
 
