@@ -19,11 +19,13 @@ img{
 }
 
 /*  estilos header */
+
 div header{
     background-color: #237be0;
     height: 150px;
     position: sticky;
-    top: 0px;
+    top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -44,15 +46,12 @@ div header nav ul{
 div header nav ul li a{
     color: whitesmoke;
     text-decoration: none;
+    background-color: #237BE0;
     border: black solid 1px;
-    border-radius: 20px;
     padding: 6px;
 }
 
-div header nav ul li a:hover{
-    color: #FFDD00;
-    border: white solid 1px;
-}
+
 
 
 div header div a img{
@@ -95,6 +94,11 @@ main .imagenIndex img, main .imagenIndexDos img{
 .componenteUno{
     z-index: 900;
 }
+
+.componenteUno div h2 .fondoBt{
+    background-color: blue;
+}
+
 /* estilos main galeria */
 
 .tituloGaleria, .fotosGaleria{
@@ -135,6 +139,10 @@ main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
     display: none;
 }
 
+.componenteDos p .fondoBt{
+    background-color: blue;
+}
+
 /* estilos main himno */
 
 .tituloHimno{
@@ -142,7 +150,7 @@ main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
     text-align: center;
 }
 
-.subtituloHimno{
+.subtituloHimno h2{
     text-align: center;
 }
 
@@ -159,6 +167,10 @@ main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
 .letraHimnoTitulo{
     margin-top: 1rem;
     text-align: center;
+}
+
+.componenteTres .fondoBt{
+    background-color: blue;
 }
 
 
@@ -211,6 +223,10 @@ section{
 }
 
 .mainUbicacion h3{
+    text-align: center;
+}
+
+.datosCancha{
     text-align: center;
 }
 
@@ -287,6 +303,12 @@ footer div a{
     }
 
     /* modificaciones himno */
+
+    .textosHimno{
+        width: 70%;
+        margin: 0 auto;
+    }
+    
     
     main .subtituloHimno{
         text-align: left;
@@ -303,6 +325,11 @@ footer div a{
     }
 
     /* modificaciones titulos */
+
+    .textosTitulos p{
+        width: 50%;
+        margin: 0 auto;
+    }    
  
     .contenedorImg{
         display: flex;
