@@ -36,7 +36,7 @@ div header div a{
 
 div header nav ul{
     list-style: none;
-    gap: 6px;
+    gap: 8px;
     margin-right: 20px;
     display: flex;
     justify-content: center;
@@ -51,7 +51,29 @@ div header nav ul li a{
     padding: 6px;
 }
 
+div header nav ul li:hover{
+    box-shadow: 10px 15px 5px black;
+    transform: scale(1) skew(-10deg);
+    transition: 1.5s;
+}
 
+.botonesIndicadores{
+    animation: mover 2s forwards;
+}
+
+@keyframes mover {
+    0%{
+        transform: translateY(0) rotate(360deg);
+    }
+
+    100%{
+        transform: translateY(-10px);
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        
+    }
+
+}
 
 
 div header div a img{
@@ -61,6 +83,73 @@ div header div a img{
 div header div{
     padding-bottom: 0.5rem;
 }
+
+/* estilos section */
+
+.heroSection{
+    background-image: url('../img/bocaIndex.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black ;
+    position: relative;
+   }
+
+   /* sombra foto hero section */
+
+   .heroSection:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+   }
+
+   .heroContenedor{
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 150px;
+   }
+
+   .heroContenedor h1{
+    color: #FFDD00;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+   }
+
+   .heroContenedor p{
+    color: #FFDD00;
+    font-size: 1.5rem;
+    margin: 20px 0;
+   }
+    
+   .heroContenedor a{
+    background-color: blue; 
+    color: #FFD700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+   }
+
+   .heroContenedor a:hover{
+    background-color: #004494;
+   }
+
+   .tituloPlantel{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+   }
+
 
 /* estilos main index */
 
@@ -133,6 +222,7 @@ main .imagenIndex img, main .imagenIndexDos img{
     width: 100%; 
     height: 100%;
     object-fit: cover;
+    border: #237BE0 solid 3px;
 }
 
 main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
@@ -249,6 +339,40 @@ footer div a{
     margin-right: 20px;
 }
 
+/* tablet */
+@media screen and (min-width:600px){
+    /* modificaciones Galeria */
+       main .fotoUno, main .fotoTres, main .fotoCinco, main .fotoSiete{
+        display: none;
+       }
+
+       main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
+        display: block;
+        }
+
+        .contenedorFotos{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 1.5rem;
+        } 
+
+        
+    /* modificaciones ubicacion */
+
+        .mapaBombonera{
+            display: flex;
+            justify-content: center;
+        }
+    
+        main .mapaBombonera iframe{
+            height: 400px;
+            width: 80%;
+        }
+        
+        
+}
+
+
 
 /* desktop*/
 
@@ -272,7 +396,7 @@ footer div a{
     
     /* modoficaciones galeria */
 
-    main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
+    main .fotoUno, main .fotoDos, main .fotoTres, main .fotoCuatro, main .fotoCinco, main .fotoSeis, main .fotoSiete, main .fotoOcho{
         display: block;
     }
 
@@ -299,7 +423,6 @@ footer div a{
     .videoUno iframe, .videoDos iframe{
         height: 500px;
         width: 70%;
-        border: #237BE0 solid 3px;
     }
 
     /* modificaciones himno */
