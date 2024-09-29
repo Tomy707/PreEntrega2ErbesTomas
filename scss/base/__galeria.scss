@@ -1,0 +1,76 @@
+//import
+@import "../utilidades/_variables";
+@import "../utilidades/_mixin";
+
+
+/* main galeria */
+
+.contenedorGeneral{
+    .mainGaleria{
+        .tituloGaleria{
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .fotosGaleria{
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .contenedorFotos{
+            margin: 1.8rem;
+            @include gridGaleriaMobile;
+            row-gap: 1.5rem;
+            div{
+                img{
+                    @include espacioFotosVideos;
+                }
+            }
+            
+            .fotoDos{
+                display: none;
+            }
+
+            .fotoCuatro{
+                display: none;
+            }
+
+            .fotoSeis{
+                display: none;
+            }
+
+            .fotoOcho{
+                display: none;
+            }
+        }
+
+        .videosGaleria{
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .videoUno{
+            margin: 1rem 0.5rem;
+            iframe{
+                @include espacioFotosVideos;
+                border: $colorSecundario solid 3px;
+            }
+        }
+
+        .videoDos{
+            margin: 1rem 0.5rem;
+            iframe{
+                @include espacioFotosVideos;
+                border: $colorSecundario solid 3px;
+            }
+        }
+
+        .componenteDos{
+            p{
+                .fondoBt{
+                    background-color: $colorComponentes;
+                }
+            }
+        }
+    }
+}

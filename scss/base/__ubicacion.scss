@@ -1,0 +1,33 @@
+// import
+@import "../utilidades/_variables";
+@import "../utilidades/_mixin";
+
+/* main ubicacion */
+.contenedorGeneral{
+    .mainUbicacion{
+        .ubicacionTitulo{
+            padding-top: 1rem;
+            text-align: center;
+        }
+
+        .ubicacionSubTitulo{
+            text-align: center
+        }
+
+        .mapaBombonera{
+            iframe{
+                @include espacioFotosVideos;
+                padding-bottom: 1.5rem;
+            }
+        }
+
+        h3{
+            text-align: center;
+        }
+
+        .datosCancha{
+            text-align: center;
+        }
+
+    }
+}

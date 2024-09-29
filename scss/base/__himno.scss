@@ -1,0 +1,46 @@
+// import
+@import "../utilidades/_variables";
+@import "../utilidades/_mixin" ;
+
+
+/* main himno */
+
+.contenedorGeneral{
+    .mainHimno{
+        .tituloHimno{
+            color: $colorHimno;
+            text-align: center;
+        }
+
+        .subtituloHimno{
+            h2{
+                text-align: center;
+            }
+        }
+
+        .textosHimno{
+            .textoGrande{
+                color: $colorHimno;
+            }
+        }
+
+        .imagenHimno{
+            img{
+                @include espacioFotosVideos;
+            }
+        }
+
+        .letraHimnoTitulo{
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .componenteTres{
+            .fondoBt{
+                background-color: $colorComponentes;
+            }
+        }
+
+
+    }
+}

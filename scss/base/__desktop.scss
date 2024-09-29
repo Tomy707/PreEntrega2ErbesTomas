@@ -1,0 +1,167 @@
+//import
+@import "../utilidades/_variables";
+@import "../utilidades/_mixin";
+
+
+/* estilos desktop */
+
+@media screen and (min-width:1024px){
+    .contenedorGeneral{
+        // main galeria 
+        .mainGaleria{
+            .contenedorFotos{
+                @include gridGaleriaDesktop;
+
+                .fotoUno{
+                    display: block;
+                    grid-row: span 2;
+                }
+
+                .fotoTres{
+                    display: block;
+                }
+
+                .fotoCinco{
+                    display: block;
+                }
+
+                .fotoSeis{
+                    grid-row: span 2;
+                    grid-column: span 2;
+                }
+
+                .fotoSiete{
+                    display: block;
+                }
+            }
+
+            .videoUno{
+                @include flexJustifyCenter;
+                iframe{
+                    height: 500px;
+                    width: 70%;
+                }
+            }
+
+            .videoDos{
+                @include flexJustifyCenter;
+                iframe{
+                    height: 500px;
+                    width: 70%;
+                }
+            }
+
+        }
+
+        // main himno  
+        .mainHimno{
+            
+            .textosHimno{
+                width: 70%;
+                margin: 0 auto;  
+            }
+
+            .subtituloHimno{
+                text-align: left;
+            }
+
+            .imagenHimno{
+                @include flexJustifyCenter;
+                height: 500px;
+                width: 70%; 
+                margin: 0 auto;
+                img{
+                    @include espacioFotosVideos;
+                }
+            }
+
+            .contenedorLetraHimno{
+                display: flex;
+                gap: 2rem;
+
+                .letraUno{
+                    border: solid 3px black;
+                    background-color: bisque;
+                    border-radius: 10px;
+                    h5{
+                        padding: 0.5rem;
+                    }
+
+                    p{
+                        padding: 0.5rem;
+                    }
+                }
+
+                .letraDos{
+                    border: solid 3px black;
+                    background-color: bisque;
+                    border-radius: 10px;
+                    h5{
+                        padding: 0.5rem;
+                    }
+
+                    p{
+                        padding: 0.5rem;
+                    }
+                }
+
+                .letraTres{
+                    border: solid 3px black;
+                    background-color: bisque;
+                    border-radius: 10px;
+                    h5{
+                        padding: 0.5rem;
+                    }
+
+                    p{
+                        padding: 0.5rem;
+                    }
+                }
+            }
+
+
+        }
+
+         // estilos titulos
+        .mainTitulos{
+            .textosTitulos{
+                p{
+                    width: 50%;
+                    margin: 0 auto;  
+                }
+            }
+
+            .contenedorImg{
+                @include flexJustifyCenter;
+                .imgTitulosTotales{
+                    height: 400px;
+                    width: 50%;  
+                    img{
+                        @include espacioFotosVideos;
+                    }
+                }
+            }
+        }
+
+        section{
+            div{
+                .carousel-inner{
+                        width: 50%;
+                        margin: 0 auto;
+                        text-align: center;
+                }
+            }
+        }
+
+        //estilos ubicacion
+        .mainUbicacion{
+                .mapaBombonera{
+                @include flexJustifyCenter;
+                    iframe{
+                        height: 500px;
+                        width: 40%;
+                }
+            }
+        }
+    }
+}

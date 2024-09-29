@@ -1,0 +1,33 @@
+//import
+@import "../utilidades/_variables";
+@import "../utilidades/_mixin";
+
+/* main titulos */
+.contenedorGeneral{
+    .mainTitulos{
+        .tituloTitulos{
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        .subtituloTitulos{
+            text-align: center;
+        }
+
+        .textosTitulos{
+            margin: 1rem 0px;  
+        }
+
+        .contenedorImg{
+            .imgTitulosTotales{
+                img{
+                    @include espacioFotosVideos;
+                }
+            }
+        }
+    }
+
+    section{
+        padding: 1rem;
+    }
+}

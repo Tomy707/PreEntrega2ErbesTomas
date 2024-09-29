@@ -1,502 +1,447 @@
 /* reset */
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 /* estilos generales  */
-.contenedorGeneral{
-    background-color: #FFDD00;
+.contenedorGeneral {
+  background-color: #FFDD00;
 }
 
-main{
-    padding: 0.5rem;
+main {
+  padding: 0.5rem;
 }
 
-img{
-    border: #237BE0 solid 3px;
+img {
+  border: #237BE0 solid 3px;
 }
 
-/*  estilos header */
-
-div header{
-    background-color: #237be0;
-    height: 150px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+/* header */
+div header {
+  background-color: #237be0;
+  height: 150px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
-
-div header div a{
-    display: flex;
-    justify-content: center;
+div header div {
+  padding-bottom: 0.5rem;
 }
-
-div header nav ul{
-    list-style: none;
-    gap: 8px;
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+div header div a {
+  display: flex;
+  justify-content: center;
 }
-
-div header nav ul li a{
-    color: whitesmoke;
-    text-decoration: none;
-    background-color: #237BE0;
-    border: black solid 1px;
-    padding: 6px;
+div header div a img {
+  height: 100px;
 }
-
-div header nav ul li:hover{
-    box-shadow: 10px 15px 5px black;
-    transform: scale(1) skew(-10deg);
-    transition: 1.5s;
+div header nav ul {
+  list-style: none;
+  gap: 8px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.botonesIndicadores{
-    animation: mover 2s forwards;
+div header nav ul li:hover {
+  box-shadow: 10px 15px 5px black;
+  transform: scale(1) skew(-10deg);
+  transition: 1.5s;
 }
-
+div header nav ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: #237BE0;
+  border: black solid 1px;
+  padding: 6px;
+}
+div header nav ul .botonesIndicadores {
+  animation: mover 2s forwards;
+}
 @keyframes mover {
-    0%{
-        transform: translateY(0) rotate(360deg);
-    }
-
-    100%{
-        transform: translateY(-10px);
-        text-decoration: underline;
-        text-underline-offset: 5px;
-        
-    }
-
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
 }
 
-
-div header div a img{
-    height: 100px;
+/* section */
+.contenedorGeneral .heroSection {
+  background-image: url("../img/bocaIndex.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position: relative;
+}
+.contenedorGeneral .heroSection:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.contenedorGeneral .heroSection .heroContenedor {
+  text-align: center;
+  z-index: 1;
+  margin-bottom: 150px;
+}
+.contenedorGeneral .heroSection .heroContenedor h1 {
+  color: #FFDD00;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.contenedorGeneral .heroSection .heroContenedor p {
+  color: #FFDD00;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.contenedorGeneral .heroSection .heroContenedor a {
+  background-color: rgb(7, 7, 211);
+  color: #FFDD00;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+.contenedorGeneral .heroSection .heroContenedor a:hover {
+  background-color: #004494;
 }
 
-div header div{
-    padding-bottom: 0.5rem;
+/* main index */
+.contenedorGeneral main .tituloPlantel {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.contenedorGeneral main .componenteUno {
+  z-index: 900;
+}
+.contenedorGeneral main .componenteUno div h2 .fondoBt {
+  background-color: rgb(0, 0, 221);
 }
 
-/* estilos section */
-
-.heroSection{
-    background-image: url('../img/bocaIndex.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black ;
-    position: relative;
-   }
-
-   /* sombra foto hero section */
-
-   .heroSection:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-   }
-
-   .heroContenedor{
-    text-align: center;
-    z-index: 1;
-    margin-bottom: 150px;
-   }
-
-   .heroContenedor h1{
-    color: #FFDD00;
-    font-size: 3rem;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-   }
-
-   .heroContenedor p{
-    color: #FFDD00;
-    font-size: 1.5rem;
-    margin: 20px 0;
-   }
-    
-   .heroContenedor a{
-    background-color: blue; 
-    color: #FFD700;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-   }
-
-   .heroContenedor a:hover{
-    background-color: #004494;
-   }
-
-   .tituloPlantel{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-   }
-
-
-/* estilos main index */
-
-.tituloIndex{
-    padding-top: 10px;
+/* main galeria */
+.contenedorGeneral .mainGaleria .tituloGaleria {
+  text-align: center;
+  padding-top: 1rem;
+}
+.contenedorGeneral .mainGaleria .fotosGaleria {
+  text-align: center;
+  padding-top: 1rem;
+}
+.contenedorGeneral .mainGaleria .contenedorFotos {
+  margin: 1.8rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 20%);
+  row-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+.contenedorGeneral .mainGaleria .contenedorFotos div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contenedorGeneral .mainGaleria .contenedorFotos .fotoDos {
+  display: none;
+}
+.contenedorGeneral .mainGaleria .contenedorFotos .fotoCuatro {
+  display: none;
+}
+.contenedorGeneral .mainGaleria .contenedorFotos .fotoSeis {
+  display: none;
+}
+.contenedorGeneral .mainGaleria .contenedorFotos .fotoOcho {
+  display: none;
+}
+.contenedorGeneral .mainGaleria .videosGaleria {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.contenedorGeneral .mainGaleria .videoUno {
+  margin: 1rem 0.5rem;
+}
+.contenedorGeneral .mainGaleria .videoUno iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: #237BE0 solid 3px;
+}
+.contenedorGeneral .mainGaleria .videoDos {
+  margin: 1rem 0.5rem;
+}
+.contenedorGeneral .mainGaleria .videoDos iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: #237BE0 solid 3px;
+}
+.contenedorGeneral .mainGaleria .componenteDos p .fondoBt {
+  background-color: rgb(0, 0, 221);
 }
 
-.tituloIndex, .subtituloIndex, .tituloPlantelActual{
-    text-align: center;
+/* main himno */
+.contenedorGeneral .mainHimno .tituloHimno {
+  color: #237BE0;
+  text-align: center;
+}
+.contenedorGeneral .mainHimno .subtituloHimno h2 {
+  text-align: center;
+}
+.contenedorGeneral .mainHimno .textosHimno .textoGrande {
+  color: #237BE0;
+}
+.contenedorGeneral .mainHimno .imagenHimno img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contenedorGeneral .mainHimno .letraHimnoTitulo {
+  margin-top: 1rem;
+  text-align: center;
+}
+.contenedorGeneral .mainHimno .componenteTres .fondoBt {
+  background-color: rgb(0, 0, 221);
 }
 
-main .imagenIndex, main .imagenIndexDos{
-   display: grid;
-   justify-content: center;
-   gap: 1rem;
-   margin-bottom: 1rem;
+/* main titulos */
+.contenedorGeneral .mainTitulos .tituloTitulos {
+  padding-top: 1.5rem;
+  text-align: center;
+}
+.contenedorGeneral .mainTitulos .subtituloTitulos {
+  text-align: center;
+}
+.contenedorGeneral .mainTitulos .textosTitulos {
+  margin: 1rem 0px;
+}
+.contenedorGeneral .mainTitulos .contenedorImg .imgTitulosTotales img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contenedorGeneral section {
+  padding: 1rem;
 }
 
-.tituloPlantelActual{
-    padding-top: 10px;
-    padding-bottom: 10px;
+/* main ubicacion */
+.contenedorGeneral .mainUbicacion .ubicacionTitulo {
+  padding-top: 1rem;
+  text-align: center;
 }
-
-
-main .imagenIndex img, main .imagenIndexDos img{
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
+.contenedorGeneral .mainUbicacion .ubicacionSubTitulo {
+  text-align: center;
 }
-
-.componenteUno{
-    z-index: 900;
+.contenedorGeneral .mainUbicacion .mapaBombonera iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-bottom: 1.5rem;
 }
-
-.componenteUno div h2 .fondoBt{
-    background-color: blue;
+.contenedorGeneral .mainUbicacion h3 {
+  text-align: center;
 }
-
-/* estilos main galeria */
-
-.tituloGaleria, .fotosGaleria{
-    text-align: center;
-    padding-top: 1rem;
-}
-
-.contenedorFotos{
-    margin: 1.8rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 20%);
-    row-gap: 1.5rem;
-}
-
-.mainGaleria div div img{
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-}
-
-.videosGaleria{
-    text-align: center;
-    padding-bottom: 1rem;
-}
-
-.videoUno, .videoDos{
-    margin: 1rem 0.5rem;
-}
-
-.videoUno iframe, .videoDos iframe{
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-    border: #237BE0 solid 3px;
-}
-
-main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
-    display: none;
-}
-
-.componenteDos p .fondoBt{
-    background-color: blue;
-}
-
-/* estilos main himno */
-
-.tituloHimno{
-    color: #237BE0;
-    text-align: center;
-}
-
-.subtituloHimno h2{
-    text-align: center;
-}
-
-.textoGrande{
-    color: #237BE0;
-}
-
-.imagenHimno img{
-    width: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.letraHimnoTitulo{
-    margin-top: 1rem;
-    text-align: center;
-}
-
-.componenteTres .fondoBt{
-    background-color: blue;
-}
-
-
-/* estilos main titulos */
-
-.tituloTitulos{
-    padding-top: 1.5rem;
-    text-align: center;
-}
-
-.subtituloTitulos{
-    text-align: center;
-}
-
-.mainTitulos div{
-    margin: 1rem 0px;
-}
-
-.mainTitulos .imgTitulos img{
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-}
-
-.mainTitulos .imgTitulosTotales img{
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-}
-
-section{
-    padding: 1rem;
-}
-
-/* estilos main ubicacion */
-
-.ubicacionTitulo{
-    padding-top: 1rem;
-}
-
-.ubicacionTitulo, .ubicacionSubTitulo{
-    text-align: center;
-}
-
-.mainUbicacion div iframe{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding-bottom: 1.5rem;
-}
-
-.mainUbicacion h3{
-    text-align: center;
-}
-
-.datosCancha{
-    text-align: center;
+.contenedorGeneral .mainUbicacion .datosCancha {
+  text-align: center;
 }
 
 /* estilos footer */
+.contenedorGeneral footer {
+  background-color: #237BE0;
+  color: whitesmoke;
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+  font-family: cursive;
+}
+.contenedorGeneral footer .redes {
+  text-align: center;
+}
+.contenedorGeneral footer .redes a {
+  margin-right: 20px;
+}
 
-footer{
-    background-color: #237BE0;
-    color: whitesmoke;
+/* estilos tablet */
+@media screen and (min-width: 600px) {
+  .contenedorGeneral .mainGaleria .contenedorFotos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoUno {
+    display: none;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoDos {
+    display: block;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoTres {
+    display: none;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoCuatro {
+    display: block;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoCinco {
+    display: none;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoSeis {
+    display: block;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoSiete {
+    display: none;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoOcho {
+    display: block;
+  }
+  .contenedorGeneral .mainUbicacion .mapaBombonera {
+    display: flex;
+    justify-content: center;
+  }
+  .contenedorGeneral .mainUbicacion .mapaBombonera iframe {
+    height: 400px;
+    width: 80%;
+  }
+}
+/* estilos desktop */
+@media screen and (min-width: 1024px) {
+  .contenedorGeneral .mainGaleria .contenedorFotos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 20%);
+    column-gap: 1.5rem;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoUno {
+    display: block;
+    grid-row: span 2;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoTres {
+    display: block;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoCinco {
+    display: block;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoSeis {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .contenedorGeneral .mainGaleria .contenedorFotos .fotoSiete {
+    display: block;
+  }
+  .contenedorGeneral .mainGaleria .videoUno {
+    display: flex;
+    justify-content: center;
+  }
+  .contenedorGeneral .mainGaleria .videoUno iframe {
+    height: 500px;
+    width: 70%;
+  }
+  .contenedorGeneral .mainGaleria .videoDos {
+    display: flex;
+    justify-content: center;
+  }
+  .contenedorGeneral .mainGaleria .videoDos iframe {
+    height: 500px;
+    width: 70%;
+  }
+  .contenedorGeneral .mainHimno .textosHimno {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .contenedorGeneral .mainHimno .subtituloHimno {
+    text-align: left;
+  }
+  .contenedorGeneral .mainHimno .imagenHimno {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .contenedorGeneral .mainHimno .imagenHimno img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno {
+    display: flex;
+    gap: 2rem;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno .letraUno {
+    border: solid 3px black;
+    background-color: bisque;
+    border-radius: 10px;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno .letraUno h5 {
+    padding: 0.5rem;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno .letraUno p {
+    padding: 0.5rem;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno .letraDos {
+    border: solid 3px black;
+    background-color: bisque;
+    border-radius: 10px;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno .letraDos h5 {
+    padding: 0.5rem;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno .letraDos p {
+    padding: 0.5rem;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno .letraTres {
+    border: solid 3px black;
+    background-color: bisque;
+    border-radius: 10px;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno .letraTres h5 {
+    padding: 0.5rem;
+  }
+  .contenedorGeneral .mainHimno .contenedorLetraHimno .letraTres p {
+    padding: 0.5rem;
+  }
+  .contenedorGeneral .mainTitulos .textosTitulos p {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .contenedorGeneral .mainTitulos .contenedorImg {
+    display: flex;
+    justify-content: center;
+  }
+  .contenedorGeneral .mainTitulos .contenedorImg .imgTitulosTotales {
+    height: 400px;
+    width: 50%;
+  }
+  .contenedorGeneral .mainTitulos .contenedorImg .imgTitulosTotales img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .contenedorGeneral section div .carousel-inner {
+    width: 50%;
+    margin: 0 auto;
     text-align: center;
-    padding: 15px;
-    font-size: 15px;
-    font-family: cursive;
+  }
+  .contenedorGeneral .mainUbicacion .mapaBombonera {
+    display: flex;
+    justify-content: center;
+  }
+  .contenedorGeneral .mainUbicacion .mapaBombonera iframe {
+    height: 500px;
+    width: 40%;
+  }
 }
 
-footer .redes{
-    text-align: center;
-}
-
-footer div a{
-    margin-right: 20px;
-}
-
-/* tablet */
-@media screen and (min-width:600px){
-    /* modificaciones Galeria */
-       main .fotoUno, main .fotoTres, main .fotoCinco, main .fotoSiete{
-        display: none;
-       }
-
-       main .fotoDos, main .fotoCuatro, main .fotoSeis, main .fotoOcho{
-        display: block;
-        }
-
-        .contenedorFotos{
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            column-gap: 1.5rem;
-        } 
-
-        
-    /* modificaciones ubicacion */
-
-        .mapaBombonera{
-            display: flex;
-            justify-content: center;
-        }
-    
-        main .mapaBombonera iframe{
-            height: 400px;
-            width: 80%;
-        }
-        
-        
-}
-
-
-
-/* desktop*/
-
-@media screen and (min-width:1024px) {
-
-    /* modificaciones main index */
-
-    .imagenIndex{
-        height: 300px;
-        width: 100%;
-        margin-top: 3rem;
-    }
-
-    main .imagenIndex img{
-        justify-content: center;
-    }
-
-    .imagenIndexDos{
-        padding: 0rem 6rem 2rem 6rem;
-    }
-    
-    /* modoficaciones galeria */
-
-    main .fotoUno, main .fotoDos, main .fotoTres, main .fotoCuatro, main .fotoCinco, main .fotoSeis, main .fotoSiete, main .fotoOcho{
-        display: block;
-    }
-
-    .contenedorFotos{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 20%);
-        column-gap: 1.5rem;
-    }
-
-    .fotoUno{
-        grid-row: span 2;
-    }
-
-    .fotoSeis{
-        grid-row: span 2;
-        grid-column: span 2;
-    }
-
-    .videoUno, .videoDos{
-        display: flex;
-        justify-content: center;
-    }
-
-    .videoUno iframe, .videoDos iframe{
-        height: 500px;
-        width: 70%;
-    }
-
-    /* modificaciones himno */
-
-    .textosHimno{
-        width: 70%;
-        margin: 0 auto;
-    }
-    
-    
-    main .subtituloHimno{
-        text-align: left;
-    }
-
-    .imagenHimno{
-        display: flex;
-        justify-content: center;
-    }
-
-    main .imagenHimno img{
-        height: 500px;
-        width: 70%;
-    }
-
-    /* modificaciones titulos */
-
-    .textosTitulos p{
-        width: 50%;
-        margin: 0 auto;
-    }    
- 
-    .contenedorImg{
-        display: flex;
-        justify-content: center;
-    }
-    .imgTitulosTotales{
-        height: 500px;
-        width: 50%;  
-    }
-
-    .contenedorLetraHimno{
-        display: flex;
-        gap: 2rem;
-    }
-
-    .letraUno, .letraDos, .letraTres{
-        border: solid 3px black;
-        background-color: bisque;
-        border-radius: 10px;
-    }
-    
-    .letraUno h5, .letraDos h5, .letraTres h5{
-        padding: 0.5rem;
-    }
-
-   .letraUno p, .letraDos p, .letraTres p{
-        padding: 0.5rem;
-    }
-
-    section div .carousel-inner{
-        width: 50%;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    /* modificaciones ubicacion */
-
-    .mapaBombonera{
-        display: flex;
-        justify-content: center;
-    }
-
-    main .mapaBombonera iframe{
-        height: 500px;
-        width: 40%;
-    }
-}
+/*# sourceMappingURL=main.css.map */

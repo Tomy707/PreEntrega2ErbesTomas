@@ -1,0 +1,58 @@
+// import
+@import "../utilidades/_variables";
+@import "../utilidades/_mixin";
+
+/* estilos tablet */
+
+@media screen and (min-width:600px){
+    .contenedorGeneral{
+        .mainGaleria{
+            .contenedorFotos{
+                @include gridGaleriaTablet;
+
+                .fotoUno{
+                    display: none;
+                }
+
+                .fotoDos{
+                    display: block;
+                }
+
+                .fotoTres{
+                    display: none;
+                }
+
+                .fotoCuatro{
+                    display: block;
+                }
+
+                .fotoCinco{
+                    display: none;
+                }
+
+                .fotoSeis{
+                    display: block;
+                }
+
+                .fotoSiete{
+                    display: none;
+                }
+
+                .fotoOcho{
+                    display: block;
+                }
+            }
+        }
+
+        .mainUbicacion{
+            .mapaBombonera{
+                @include flexJustifyCenter;
+                iframe{
+                    height: 400px;
+                    width: 80%;
+                }
+            }
+        }
+    }
+    
+}
