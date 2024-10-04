@@ -6,6 +6,40 @@
 
 @media screen and (min-width:600px){
     .contenedorGeneral{
+        //header
+        header{
+            display: flex;
+            align-items: center;
+            height: 100px;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            div{
+                display: inline-block;
+                padding: 1rem;
+                margin-left: 3rem;
+                a{
+                    @include flexJustifyCenter;
+                    img{
+                        height: 100px;
+                    }
+             
+                } 
+            }
+
+            .navBar{
+                ul{
+                    margin-right: 5rem;
+                    li{
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+        }
+
+
+
         .mainGaleria{
             .contenedorFotos{
                 @include gridGaleriaTablet;
